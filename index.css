@@ -1,0 +1,271 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+footer {
+  background-color: lightblue;
+  color: #06495a;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header {
+  position: relative;
+  background-color: lightblue;
+  color: #06495a;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 0 8px 8px;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 75%;
+  background: rgba(4, 30, 78, 0.1);
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+  /* clip-path: polygon(0% 0%, 100% 0%, 80% 50%, 100% 100%, 0% 100%, 20% 50%); */ /* alternate design*/
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  z-index: 1;
+}
+
+header p {
+  margin: 0;
+  font-size: 19.2px;
+  z-index: 1;
+}
+
+header section {
+  background-color: inherit;
+}
+
+nav {
+  background-color: #356089;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 0 0 8px 8px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 10px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  color: lightblue;
+}
+main {
+  padding: 20px;
+}
+
+.social_contact ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.social_contact ul li a {
+  font-size: 30px;
+  transition: color 0.3s;
+}
+
+section {
+  margin: 30px 0;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+}
+.blog-section {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.blog-section > article {
+  background-color: #ffffff;
+  min-width: 45%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.updated_date {
+  color: gray;
+  font-size: small;
+  display: block;
+  font-family:emoji;
+}
+.link-highlight {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-highlight:hover {
+  text-decoration: underline;
+  color: #356089;
+}
+
+#ref ul {
+  list-style: none;
+  padding: 0;
+}
+
+#ref ul li {
+  margin: 10px 0;
+}
+
+#ref ul li a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#ref ul li a:hover {
+  color: #356089;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#message {
+  flex-grow: 0;
+}
+form input,
+form textarea
+{
+  width: 20%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #356089;
+}
+
+footer p {
+  margin: 10px 0 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2em;
+    padding: 10px 0;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  .blog-section {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .blog-section > article {
+    flex-basis: 100%;
+  }
+  img,
+  iframe {
+    width: 100%;
+  }
+  form {
+    flex-direction: column;
+    align-items:self-start;
+  }
+
+  form input,
+  form textarea {
+    width: 92%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
